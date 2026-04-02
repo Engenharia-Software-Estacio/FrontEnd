@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Project
 
-## Getting Started
+Projeto criado com **Next.js** usando `create-next-app`, configurado para desenvolvimento moderno com **App Router**, **TypeScript** e **shadcn/ui**.
 
-First, run the development server:
+---
+
+# 📋 Pré-requisitos
+
+Antes de começar, instale:
+
+* Node.js >= 18
+* npm, yarn, pnpm ou bun
+* Git
+
+Verificar versões:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+---
+
+# 🔑 Configurando chave SSH (caso ainda não tenha)
+
+Verifique se já existe uma chave:
+
+```bash
+ls ~/.ssh
+```
+
+Se não existir, crie:
+
+```bash
+ssh-keygen -t ed25519 -C "seu-email@example.com"
+```
+
+Pressione **Enter** para aceitar o caminho padrão.
+
+Depois, copie a chave pública:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Adicione no GitHub:
+
+Settings → SSH and GPG keys → New SSH key
+
+Teste a conexão:
+
+```bash
+ssh -T git@github.com
+```
+
+---
+
+# 📦 Instalação
+
+Clone o repositório:
+
+```bash
+git clone git@github.com:Engenharia-Software-Estacio/FrontEnd.git
+```
+
+Entre na pasta:
+
+```bash
+cd FrontEnd
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+
+---
+
+# 🚀 Rodando o projeto
+
+Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra no navegador:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O projeto atualiza automaticamente ao editar arquivos.
 
-## Learn More
+Arquivo inicial:
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/page.tsx
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🗂 Estrutura básica do projeto
 
-## Deploy on Vercel
+```
+src/
+│
+├── app/                # rotas (App Router)
+│   ├── layout.tsx      # layout global
+│   ├── page.tsx        # página inicial
+│   └── globals.css     # estilos globais
+│
+├── components/         # componentes reutilizáveis
+│
+├── lib/                # utilidades e configurações
+│
+├── hooks/              # hooks customizados
+│
+├── services/           # integração com APIs
+│
+└── types/              # tipagens globais
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 📚 Scripts disponíveis
+
+```bash
+npm run dev      # ambiente de desenvolvimento
+npm run build    # build de produção
+npm run start    # roda build
+npm run lint     # lint do projeto
+```
+
+---
+
+# 🌐 Deploy
+
+Build de produção:
+
+```bash
+npm run build
+```
+
+Deploy recomendado:
+
+https://vercel.com/new
+
+Documentação:
+
+https://nextjs.org/docs/app/building-your-application/deploying
+
+---
+
+# 📄 Licença
+
+MIT
