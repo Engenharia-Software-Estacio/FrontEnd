@@ -9,7 +9,7 @@ Projeto criado com **Next.js** usando `create-next-app`, configurado para desenv
 Antes de começar, instale:
 
 * Node.js >= 18
-* npm, yarn, pnpm ou bun
+* npm
 * Git
 
 Verificar versões:
